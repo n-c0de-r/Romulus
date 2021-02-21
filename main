@@ -11,7 +11,7 @@ def decode():
   usertxt = input("Enter the text to decode: ")
   for letters in usertxt:
     cnr = ord(letters.upper())
-    if cnr == 32:
+    if cnr < 65 or cnr >90:
       result += chr(cnr)
     elif cnr-shift <= 65:
       cnr += 25
@@ -34,7 +34,7 @@ def encode():
   usertxt = input("Enter the text to encode: ")
   for letters in usertxt:
     cnr = ord(letters.upper())
-    if cnr == 32:
+    if cnr < 65 or cnr >90:
       result += chr(cnr)
     elif cnr+shift >= 90:
       cnr -= 25
